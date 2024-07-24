@@ -13,13 +13,14 @@ boton1.addEventListener("click", function () {
         contra: contra1.value,
     }
 
+    
     lista1.push(usuario1)
         alert("Usuario Registrado")
 
     localStorage.setItem("listaUsuario", JSON.stringify(lista1))
 
 
-        console.log(typeof(lista1));
+        console.log(lista1);
 })
 
 
