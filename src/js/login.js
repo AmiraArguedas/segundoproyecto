@@ -12,3 +12,9 @@ boton2.addEventListener("click",function () {
         }
     }
 })
+
+
+
+
+
+
