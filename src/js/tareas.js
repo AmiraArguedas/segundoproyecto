@@ -23,13 +23,15 @@ const select = document.getElementById("select")
     botonModificar1.innerHTML = "MODIFICAR"
 
 
+
+
     botonEliminar1.addEventListener("click", function () {
         contenedorTareas.removeChild(divHijo1);
             alert("Eliminado de manera exitoso");
         })
 
     botonModificar1.addEventListener("click", function () {
-        texto1.innerHTML = inputDato.value 
+        texto1.innerHTML = inputModificar1.value
             alert("Texto modificado de manera exitosa");
     })
 
@@ -56,11 +58,11 @@ const select = document.getElementById("select")
                     alert("Eliminado de manera exitoso");
                 })
             botonModificar2.addEventListener("click", function () {
-                texto2.innerHTML = inputDato.value 
+                texto2.innerHTML = inputModificar2.value
                     alert("Texto modificado de manera exitosa");
             })
         }
-
+                    
     }
 
   }) 
