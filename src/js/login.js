@@ -5,11 +5,9 @@ const nombre2 = document.getElementById("nombre2")
 
 const valores = JSON.parse( localStorage.getItem("listaUsuario")||[])
 
-
 console.log(valores);
 
 boton2.addEventListener("click", function () {
-
 
     if (correo2.value.length == 0 && nombre2.value.length == 0 && contra2.value.length == 0) {
         console.log("debe ingresar datos");

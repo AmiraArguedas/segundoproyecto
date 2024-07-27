@@ -3,6 +3,11 @@ const botonGuardar = document.getElementById("botonGuardar")
 const contenedorTareas = document.getElementById("contenedorTareas")
 const contenedorEventos = document.getElementById("contenedorEventos")
 const select = document.getElementById("select")
+const inputFecha = document.getElementById("inputFecha")
+
+let listaTareas = [];
+let listaEventos = [];
+
 
   botonGuardar.addEventListener("click", function () {
 
@@ -13,7 +18,11 @@ const select = document.getElementById("select")
         const botonModificar1 = document.createElement("button")
         const inputModificar1 = document.createElement("input")
 
-    texto1.innerHTML = inputDato.value;
+        let conca1 = inputFecha.value +" "+ inputDato.value
+        texto1.innerHTML = conca1;
+
+
+        
     botonEliminar1.innerHTML = "ELIMINAR"
     contenedorTareas.appendChild(divHijo1)
     divHijo1.appendChild(texto1)
@@ -21,9 +30,6 @@ const select = document.getElementById("select")
     divHijo1.appendChild(inputModificar1)
     divHijo1.appendChild(botonModificar1)
     botonModificar1.innerHTML = "MODIFICAR"
-
-
-
 
     botonEliminar1.addEventListener("click", function () {
         contenedorTareas.removeChild(divHijo1);
@@ -33,6 +39,7 @@ const select = document.getElementById("select")
     botonModificar1.addEventListener("click", function () {
         texto1.innerHTML = inputModificar1.value
             alert("Texto modificado de manera exitosa");
+
     })
 
     }else{
@@ -43,8 +50,10 @@ const select = document.getElementById("select")
             const botonEliminar2 = document.createElement("button")
             const botonModificar2 = document.createElement("button")
             const inputModificar2 = document.createElement("input")
+    
+            let conca2 = inputFecha.value +" "+ inputDato.value
+            texto2.innerHTML = conca2;
 
-            texto2.innerHTML = inputDato.value;
             botonEliminar2.innerHTML = "ELIMINAR"
             divHijo2.appendChild(texto2)
             divHijo2.appendChild(botonEliminar2)
@@ -66,6 +75,7 @@ const select = document.getElementById("select")
     }
 
   }) 
+
     
 
 
