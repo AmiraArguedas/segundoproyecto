@@ -8,7 +8,6 @@ const inputFecha = document.getElementById("inputFecha")
 let listaTareas = [];
 let listaEventos = [];
 
-
   botonGuardar.addEventListener("click", function () {
 
     if (select.value === "tarea") {
@@ -20,9 +19,13 @@ let listaEventos = [];
 
         let conca1 = inputFecha.value +" "+ inputDato.value
         texto1.innerHTML = conca1;
-
-
         
+        listaTareas.push(conca1)
+            console.log("tarea guardada");
+
+    localStorage.setItem("tareasRegistradas", JSON.stringify(listaTareas))
+            console.log(listaTareas);
+
     botonEliminar1.innerHTML = "ELIMINAR"
     contenedorTareas.appendChild(divHijo1)
     divHijo1.appendChild(texto1)
@@ -53,6 +56,13 @@ let listaEventos = [];
     
             let conca2 = inputFecha.value +" "+ inputDato.value
             texto2.innerHTML = conca2;
+
+            listaEventos.push(conca2)
+                console.log("evento guardado");
+
+        localStorage.setItem("eventosRegistrado", JSON.stringify(listaEventos))
+            console.log(listaEventos);
+        
 
             botonEliminar2.innerHTML = "ELIMINAR"
             divHijo2.appendChild(texto2)
