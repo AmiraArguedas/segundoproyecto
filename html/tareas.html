@@ -4,44 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas y Eventos</title>
+
+    <link rel="stylesheet" href="/segundoproyecto/src/css/tareas.css">
+
 </head>
 
 <body>
  
-    <h2>Organización de eventos y tareas</h2>
+<div class="contenedorMain">
 
-    <input id="inputDato" type="text" placeholder="Ingresa la tarea o evento" name="">
-    <input id="inputFecha" type="text" placeholder="Ingresa la fecha" name="">
+    <br>
 
-    <select id="select">
+    <h2 class="textoH2">Organización de eventos y tareas</h2>
+
+            <br>
+
+<div class="contenedorIntro">
+    <br>
+    <input class="inputTexto" id="inputDato" type="text" placeholder="Ingresa la tarea o evento" name="">
+            
+    <br>
+
+    <input class="inputFecha" id="inputFecha" type="text" placeholder="Ingresa la fecha" name="">
+
+            <br>
+            <br>
+
+    <select class="seleccionar" id="select">
         <option value="tarea"> Tarea </option>
         <option value="evento"> Evento </option>
     </select>
 
     <br>
-    <br>
 
-    <input id="botonGuardar" type="button" value="GUARDAR">
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-    <div id="contenedorTareas">
-        <h3>TAREAS</h3>
-    </div>
+    <input class="botonGuardar" id="botonGuardar" type="button" value="GUARDAR">
 
     <br>
     <br>
+
+</div>
+
     <br>
     <br>
 
-    <div id="contenedorEventos">
-        <h3>EVENTOS</h3>
-    </div>
+
+            <div class="tareas" id="contenedorTareas">
+                    <h3 class="textoTareas">TAREAS</h3>
+            </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+            <div class="eventos" id="contenedorEventos">
+                    <h3 class="textoEventos">EVENTOS</h3>
+            </div>
+                    <br>
+                    <br>
+
+    <br>
+    <br>
+    <br>
+
+</div>
 
 
     <script src="../src/js/tareas.js"></script>

@@ -1,21 +1,82 @@
+.contenedorMain{
+    background-color: rgb(255, 255, 255);
+}
 
+.textoH2{
+    font-family: cambria;
+    font-size: x-large;
+    margin-left: 65px;
+}
 
+.contenedorIntro{
+    display: grid;
+    grid-template-rows: auto;
+    background-color: aqua;
+    width: 500px;
+    margin-left: 60px;
+}
 
+.inputTexto{
+    width: 300px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 18px;
+}
 
+.inputFecha{
+    width: 300px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 18px;
+}
 
+.seleccionar{
+    width: 70px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 18px;
+}
 
+.botonGuardar{
+    width: 120px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 18px;
+}
 
+.tareas{
+    font-family: cambria;
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+    border-style: groove;
+    border-radius: 10px;
+    border-width: 4px;
+    width: 500px;
+    margin-left: 60px;
+}
 
+.eventos{
+    font-family: cambria;
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+    border-style: groove;
+    border-radius: 10px;
+    border-width: 4px;
+    width: 500px;
+    margin-left: 60px;  
+}
 
+.textoTareas{
+    margin-left: 30px;
+}
 
-
-
-
-
-
-
-
-
+.textoEventos{
+    margin-left: 30px;
+}
 
 
 
