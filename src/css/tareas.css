@@ -12,7 +12,7 @@
     display: grid;
     grid-template-rows: auto;
     background-color: aqua;
-    width: 500px;
+    width: 400px;
     margin-left: 60px;
 }
 
@@ -78,12 +78,11 @@
     margin-left: 30px;
 }
 
-
-
-
-
-
-
+.logoLogin{
+    height: 100px;
+    width: 170px;
+    margin-left: 90px;
+}
 
 
 

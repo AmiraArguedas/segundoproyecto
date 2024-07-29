@@ -1,5 +1,5 @@
 .contenedorRegistro{
-    background-color: rgb(0, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .fondoRegister{
@@ -90,7 +90,11 @@
     padding-bottom: 10px;
 }
 
-
+.logoLogin{
+    height: 100px;
+    width: 170px;
+    margin-left: 90px;
+}
 
 
 
