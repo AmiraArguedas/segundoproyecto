@@ -6,7 +6,11 @@ const boton1 = document.getElementById("btn1")
 let lista1 = [];
 
 boton1.addEventListener("click", function () {
-   
+if (contra1.value.length == 0) {
+    alert("Debe ingresar datos");
+
+}else{
+
     let usuario1 ={
         correo: correo1.value,
         nombre: nombre1.value,
@@ -18,8 +22,9 @@ boton1.addEventListener("click", function () {
 
     localStorage.setItem("listaUsuario", JSON.stringify(lista1))
 
-        console.log(lista1);
+    }
 })
+
 
 
 

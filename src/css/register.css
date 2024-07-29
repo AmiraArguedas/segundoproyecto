@@ -1,0 +1,102 @@
+.fondoRegister{
+    display: grid;
+    grid-template-rows: auto;
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+    border-style: groove;
+    width: 350px;
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: 140px 100px;
+    margin-left: 30px;
+}
+
+.textoH2{
+    font-family: cambria;
+    font-size: x-large;
+    margin-left: 65px;
+}
+
+.pCorreo{
+    font-family: cambria; 
+    margin-left: 27px;
+    font-weight: bolder;
+}
+
+.pNombreUsuario{
+    font-family: cambria;
+    margin-left: 27px;
+    font-weight: bolder;
+}
+
+.pContraseña{
+    font-family: cambria;
+    margin-left: 27px;
+    font-weight: bolder;
+}
+
+.inputCorreo{
+    width: 300px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 18px;
+}
+
+.inputNombreUsuario{
+    width: 300px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 18px;
+}
+
+.inputContraseña{
+    width: 300px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 18px;
+}
+
+.botonEnviar{
+    width: 110px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(25, 177, 248);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    
+}
+
+.botonIniciarSesion{
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
