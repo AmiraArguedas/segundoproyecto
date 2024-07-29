@@ -21,10 +21,9 @@ let listaEventos = [];
         texto1.innerHTML = conca1;
         
         listaTareas.push(conca1)
-            console.log("tarea guardada");
+            console.log("tarea guardada"); 
 
     localStorage.setItem("tareasRegistradas", JSON.stringify(listaTareas))
-            console.log(listaTareas);
 
     botonEliminar1.innerHTML = "ELIMINAR"
     contenedorTareas.appendChild(divHijo1)
@@ -42,7 +41,6 @@ let listaEventos = [];
     botonModificar1.addEventListener("click", function () {
         texto1.innerHTML = inputModificar1.value
             alert("Texto modificado de manera exitosa");
-
     })
 
     }else{
@@ -61,8 +59,6 @@ let listaEventos = [];
                 console.log("evento guardado");
 
         localStorage.setItem("eventosRegistrado", JSON.stringify(listaEventos))
-            console.log(listaEventos);
-        
 
             botonEliminar2.innerHTML = "ELIMINAR"
             divHijo2.appendChild(texto2)
@@ -80,19 +76,33 @@ let listaEventos = [];
                 texto2.innerHTML = inputModificar2.value
                     alert("Texto modificado de manera exitosa");
             })
-        }
-                    
+        }              
     }
-
   }) 
 
+function recargar() {
+    let datos = JSON.parse(localStorage.getItem("tareasRegistradas"))
+
+
+
+
+    for (let index = 0; index < datos.length; index++) {
+   
+
+        let container =document.createElement("div")
+
+
+        const textoP = document.createElement("p")
     
+        textoP.innerHTML = datos[index]
 
+        container.appendChild(textoP)
+        contenedorTareas.appendChild(container)
+    }
 
+    console.log(datos);
 
-
-
-
+}
 
 
 
