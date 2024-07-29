@@ -1,3 +1,7 @@
+.contenedorRegistro{
+    background-color: rgb(0, 255, 255);
+}
+
 .fondoRegister{
     display: grid;
     grid-template-rows: auto;
@@ -5,6 +9,7 @@
     border-color: black;
     border-style: groove;
     width: 350px;
+    margin-left: 60px;
 }
 
 .botones{
