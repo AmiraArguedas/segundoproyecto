@@ -81,27 +81,35 @@ let listaEventos = [];
   }) 
 
 function recargar() {
-    let datos = JSON.parse(localStorage.getItem("tareasRegistradas"))
+    let datos1 = JSON.parse(localStorage.getItem("tareasRegistradas"))
 
-
-
-
-    for (let index = 0; index < datos.length; index++) {
+    for (let index = 0; index < datos1.length; index++) {
    
-
         let container =document.createElement("div")
-
-
         const textoP = document.createElement("p")
     
-        textoP.innerHTML = datos[index]
+        textoP.innerHTML = datos1[index]
 
         container.appendChild(textoP)
         contenedorTareas.appendChild(container)
     }
+    console.log(datos1);
 
-    console.log(datos);
+//////////////////////////////////////////////////////////////////////////////////////
 
+    let datos2 = JSON.parse(localStorage.getItem("eventosRegistrado"))
+
+    for (let index = 0; index < datos2.length; index++) {
+    
+        let container = document.createElement("div")
+        const textoP = document.createElement("p")
+
+        textoP.innerHTML = datos2[index]
+
+        container.appendChild(textoP)
+        contenedorEventos.appendChild(container)
+    }
+    console.log(datos2);
 }
 
 
