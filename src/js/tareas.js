@@ -110,7 +110,7 @@ function recargar() {
 
         botonModi1.addEventListener("click", function() {
             textoP.innerHTML = inputModi1.value
-                    console.log("texto modificado exitosamente");
+                    console.log("Texto modificado exitosamente");
         })
 
     }
@@ -121,14 +121,35 @@ function recargar() {
     let datos2 = JSON.parse(localStorage .getItem("eventosRegistrado"))
 
     for (let index = 0; index < datos2.length; index++) {
-    
+
         let container = document.createElement("div")
         const textoP = document.createElement("p")
+        const botonEli2 = document.createElement("button")
+        const botonModi2 = document.createElement("button")
+        const inputModi2 = document.createElement("input")
 
         textoP.innerHTML = datos2[index]
 
+        botonEli2.innerHTML = "ELIMINAR"
+        botonModi2.innerHTML = "MODIFICAR"
+
         container.appendChild(textoP)
+        container.appendChild(botonEli2)
+        container.appendChild(inputModi2)
+        container.appendChild(botonModi2)
+
         contenedorEventos.appendChild(container)
+
+        botonEli2.addEventListener("click", function() {
+            container.remove()
+                console.log("Eliminado de manera exitosa");
+        })
+
+        botonModi2.addEventListener("click", function() {
+            textoP.innerHTML = inputModi2.value
+                console.log("Texto modificado exitosamente");
+        })
+
     }
     console.log(datos2);
 }
