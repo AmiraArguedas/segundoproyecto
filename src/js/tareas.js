@@ -35,7 +35,7 @@ let listaEventos = [];
 
     botonEliminar1.addEventListener("click", function () {
         contenedorTareas.removeChild(divHijo1);
-            alert("Eliminado de manera exitoso");
+            alert("Eliminado de manera exitosa");
         })
 
     botonModificar1.addEventListener("click", function () {
@@ -85,19 +85,40 @@ function recargar() {
 
     for (let index = 0; index < datos1.length; index++) {
    
-        let container =document.createElement("div")
+        let container = document.createElement("div")
         const textoP = document.createElement("p")
+        const botonEli1 = document.createElement("button")
+        const botonModi1 = document.createElement("button")
+        const inputModi1 = document.createElement("input")
     
         textoP.innerHTML = datos1[index]
 
+        botonEli1.innerHTML = "ELIMINAR"
+        botonModi1.innerHTML = "MODIFICAR"
+
         container.appendChild(textoP)
+        container.appendChild(botonEli1)
+        container.appendChild(inputModi1)
+        container.appendChild(botonModi1)
+
         contenedorTareas.appendChild(container)
+
+        botonEli1.addEventListener("click", function() {
+            container.remove()
+                    console.log("Eliminado de manera exitosa");
+        })
+
+        botonModi1.addEventListener("click", function() {
+            textoP.innerHTML = inputModi1.value
+                    console.log("texto modificado exitosamente");
+        })
+
     }
     console.log(datos1);
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-    let datos2 = JSON.parse(localStorage.getItem("eventosRegistrado"))
+    let datos2 = JSON.parse(localStorage .getItem("eventosRegistrado"))
 
     for (let index = 0; index < datos2.length; index++) {
     
