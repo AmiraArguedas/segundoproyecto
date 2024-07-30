@@ -1,19 +1,48 @@
 .contenedorMain{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(235, 235, 235);
+}
+
+.orden{
+    background-color: rgb(102, 102, 102);
+    display: flex;
+    flex-direction: 100px, 400px;
+    align-items: center;
+}
+
+.logoLogin{
+    height: 150px;
+    width: 250px;
+    margin-left: 60px;
 }
 
 .textoH2{
     font-family: cambria;
-    font-size: x-large;
-    margin-left: 65px;
+    font-size: xx-large;
+    margin-left: 130px;
+    color: rgb(255, 255, 255);
 }
 
-.contenedorIntro{
-    display: grid;
-    grid-template-rows: auto;
-    background-color: aqua;
-    width: 400px;
-    margin-left: 60px;
+.inputs{
+    background-color: rgb(235, 235, 235);
+    width: 700px;
+    display: flex;
+    flex-direction: 200px 200px;
+    margin-left: 80px;
+}
+
+.contenedorSelectGuardar{
+    display: flex;
+    flex-direction: 100px 100px;
+    background-color: rgb(235, 235, 235);
+    width: 250px;
+    margin-left: 700px;
+}
+
+.tareasEventos{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: 100px 100px;
+    width: 1200px;
 }
 
 .inputTexto{
@@ -76,12 +105,6 @@
 
 .textoEventos{
     margin-left: 30px;
-}
-
-.logoLogin{
-    height: 100px;
-    width: 170px;
-    margin-left: 90px;
 }
 
 
