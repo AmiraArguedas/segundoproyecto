@@ -10,7 +10,7 @@ console.log(valores);
 boton2.addEventListener("click", function () {
 
     if (correo2.value.length == 0 && nombre2.value.length == 0 && contra2.value.length == 0) {
-        console.log("debe ingresar datos");
+        alert("debe ingresar datos");
     }else{
               
         for (let index = 0; index < valores.length; index++) {

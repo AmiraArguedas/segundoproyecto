@@ -31,17 +31,22 @@ let listaEventos = [];
     divHijo1.appendChild(botonEliminar1)
     divHijo1.appendChild(inputModificar1)
     divHijo1.appendChild(botonModificar1)
+
+
+
     botonModificar1.innerHTML = "MODIFICAR"
+
+
 
     botonEliminar1.addEventListener("click", function () {
         contenedorTareas.removeChild(divHijo1);
-            alert("Eliminado de manera exitosa");
         })
 
     botonModificar1.addEventListener("click", function () {
         texto1.innerHTML = inputModificar1.value
-            alert("Texto modificado de manera exitosa");
     })
+
+
 
     }else{
 
@@ -70,11 +75,9 @@ let listaEventos = [];
 
             botonEliminar2.addEventListener("click", function () {
                 contenedorEventos.removeChild(divHijo2);
-                    alert("Eliminado de manera exitoso");
                 })
             botonModificar2.addEventListener("click", function () {
                 texto2.innerHTML = inputModificar2.value
-                    alert("Texto modificado de manera exitosa");
             })
         }              
     }
@@ -86,84 +89,121 @@ function recargar() {
     for (let index = 0; index < datos1.length; index++) {
    
         let container = document.createElement("div")
-        const textoP = document.createElement("p")
+        const textoP1 = document.createElement("p")
         const botonEli1 = document.createElement("button")
         const botonModi1 = document.createElement("button")
         const inputModi1 = document.createElement("input")
     
-        textoP.innerHTML = datos1[index]
+        textoP1.innerHTML = datos1[index]
 
         botonEli1.innerHTML = "ELIMINAR"
         botonModi1.innerHTML = "MODIFICAR"
 
-        container.appendChild(textoP)
+        container.appendChild(textoP1)
         container.appendChild(botonEli1)
         container.appendChild(inputModi1)
         container.appendChild(botonModi1)
-
         contenedorTareas.appendChild(container)
+        
 
-        botonEli1.addEventListener("click", function() {
+
+
+        botonEli1.addEventListener("click", function() {  
+                    
+            const listaEliminada1 = JSON.parse(localStorage.getItem("tareasRegistradas"))||[];
+            const listaActualizada1 = listaEliminada1.filter(tareas => tareas != textoP1.textContent)
+                localStorage.setItem("tareasRegistradas", JSON.stringify(listaActualizada1))      
+       
             container.remove()
-                    console.log("Eliminado de manera exitosa");
+            console.log("Tarea eliminada permanentemente");
         })
+
+
+
 
         botonModi1.addEventListener("click", function() {
-            textoP.innerHTML = inputModi1.value
+
+            const lista1 = JSON.parse(localStorage.getItem("tareasRegistradas"))||[];
+
+            for (let index = 0; index < lista1.length; index++) {
+
+                if (lista1[index] === textoP1.textContent) {
+                    lista1[index] = inputModi1.value
+
+                    localStorage.setItem("tareasRegistradas", JSON.stringify(lista1))
+                    textoP1.textContent = inputModi1.value
+                }
+            }
                     console.log("Texto modificado exitosamente");
         })
-
     }
+
+
+
+    
+    console.log(listaTareas);
     console.log(datos1);
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-    let datos2 = JSON.parse(localStorage .getItem("eventosRegistrado"))
+    let datos2 = JSON.parse(localStorage.getItem("eventosRegistrado"))
 
     for (let index = 0; index < datos2.length; index++) {
 
         let container = document.createElement("div")
-        const textoP = document.createElement("p")
+        const textoP2 = document.createElement("p")
         const botonEli2 = document.createElement("button")
         const botonModi2 = document.createElement("button")
         const inputModi2 = document.createElement("input")
 
-        textoP.innerHTML = datos2[index]
+        textoP2.innerHTML = datos2[index]
 
         botonEli2.innerHTML = "ELIMINAR"
         botonModi2.innerHTML = "MODIFICAR"
 
-        container.appendChild(textoP)
+        container.appendChild(textoP2)
         container.appendChild(botonEli2)
         container.appendChild(inputModi2)
         container.appendChild(botonModi2)
 
         contenedorEventos.appendChild(container)
 
+
+
+
         botonEli2.addEventListener("click", function() {
+            const listaEliminada2 = JSON.parse(localStorage.getItem("eventosRegistrado"))||[];
+            const listaActualizada2 = listaEliminada2.filter(eventos => eventos != textoP2.textContent)
+                localStorage.setItem("eventosRegistrado",JSON.stringify(listaActualizada2))
+            
             container.remove()
-                console.log("Eliminado de manera exitosa");
+            console.log("Evento eliminado permanentemente");
         })
 
+
+
+        
+
         botonModi2.addEventListener("click", function() {
-            textoP.innerHTML = inputModi2.value
+
+            const lista2 = JSON.parse(localStorage.getItem("eventosRegistrado"))||[];
+
+            for (let index = 0; index < lista2.length; index++) {
+
+                if (lista2[index] === textoP2.textContent) {
+                    lista2[index] = inputModi2.value
+
+                    localStorage.setItem("eventosRegistrado", JSON.stringify(lista2))
+                    console.log(textoP2);
+                    textoP2.innerText = inputModi2.value
+                }
+                
+            }
                 console.log("Texto modificado exitosamente");
         })
 
     }
-    console.log(datos2);
+    console.log(datos2); 
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
