@@ -81,6 +81,8 @@ let listaEventos = [];
     }
   }) 
 
+
+
 function recargar() {
     let datos1 = JSON.parse(localStorage.getItem("tareasRegistradas"))
 
@@ -177,7 +179,6 @@ function recargar() {
                 alert("Evento eliminado permanentemente");
         })
 
-
         botonModi2.addEventListener("click", function() {
 
             const lista2 = JSON.parse(localStorage.getItem("eventosRegistrado"))||[];
@@ -201,5 +202,11 @@ function recargar() {
     }
     console.log(datos2); 
 
+
+
 }
+
+
+
+
 

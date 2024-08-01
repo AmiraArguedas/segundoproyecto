@@ -110,9 +110,20 @@
     margin-left: 30px;
 }
 
+.botonCerrar{
+    background-color: rgb(255, 27, 27);
+    color: rgb(255, 255, 255);
+    display: grid;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+    padding: 9px;
+    margin: auto;
+    font-weight: bolder;
+}
 
-
-
+.sub{
+    text-decoration: none;
+}
 
 
 
