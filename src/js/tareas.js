@@ -33,11 +33,9 @@ let listaEventos = [];
     divHijo1.appendChild(botonModificar1)
 
 
-
     botonModificar1.innerHTML = "MODIFICAR"
 
-
-
+    
     botonEliminar1.addEventListener("click", function () {
         contenedorTareas.removeChild(divHijo1);
         })

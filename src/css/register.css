@@ -9,8 +9,18 @@
     border-color: black;
     border-style: groove;
     width: 350px;
-    margin-left: 400px;
     border-radius: 10px;
+    place-items: normal;
+    align-content: center;
+    text-align: start;
+    margin: auto;
+}
+
+.logoLogin{
+    display: grid;
+    height: 120px;
+    width: 200px;
+    margin: auto;
 }
 
 .botones{
@@ -89,12 +99,6 @@
     padding-right: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.logoLogin{
-    height: 120px;
-    width: 200px;
-    margin-left: 470px;
 }
 
 
