@@ -21,7 +21,7 @@ let listaEventos = [];
         texto1.innerHTML = conca1;
         
         listaTareas.push(conca1)
-            console.log("tarea guardada"); 
+            alert("Tarea guardada"); 
 
     localStorage.setItem("tareasRegistradas", JSON.stringify(listaTareas))
 
@@ -59,7 +59,7 @@ let listaEventos = [];
             texto2.innerHTML = conca2;
 
             listaEventos.push(conca2)
-                console.log("evento guardado");
+                alert("Evento guardado");
 
         localStorage.setItem("eventosRegistrado", JSON.stringify(listaEventos))
 
@@ -111,7 +111,7 @@ function recargar() {
                 localStorage.setItem("tareasRegistradas", JSON.stringify(listaActualizada1))      
        
             container.remove()
-            console.log("Tarea eliminada permanentemente");
+            alert("Tarea eliminada permanentemente");
         })
 
 
@@ -127,9 +127,11 @@ function recargar() {
 
                     localStorage.setItem("tareasRegistradas", JSON.stringify(lista1))
                     textoP1.textContent = inputModi1.value
+
+                    alert("Texto modificado exitosamente");
                 }
             }
-                    console.log("Texto modificado exitosamente");
+                
         })
     }
 
@@ -172,7 +174,7 @@ function recargar() {
                 localStorage.setItem("eventosRegistrado",JSON.stringify(listaActualizada2))
             
             container.remove()
-            console.log("Evento eliminado permanentemente");
+                alert("Evento eliminado permanentemente");
         })
 
 
@@ -188,10 +190,12 @@ function recargar() {
                     localStorage.setItem("eventosRegistrado", JSON.stringify(lista2))
                     console.log(textoP2);
                     textoP2.innerText = inputModi2.value
+
+                    alert("Texto modificado exitosamente");
                 }
                 
             }
-                console.log("Texto modificado exitosamente");
+            
         })
 
     }
