@@ -27,9 +27,8 @@
 .inputs{
     background-color: rgb(235, 235, 235);
     width: 700px;
-    display: grid;
-    grid-template-columns: 100px 100px;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
     margin: auto;
 }
 
@@ -38,14 +37,7 @@
     flex-direction: 100px 100px;
     background-color: rgb(235, 235, 235);
     width: 250px;
-    margin-left: 700px;
-}
-
-.tareasEventos{
-    background-color: rgb(235, 235, 235);
-    display: flex;
-    flex-direction: 100px 100px;
-    width: 1200px;
+    margin: auto;
 }
 
 .inputTexto{
@@ -53,7 +45,7 @@
     border-color: rgb(0, 0, 0);
     border-radius: 5px;
     padding: 3px;
-    margin-left: 18px;
+    margin-left: 100px;
 }
 
 .inputFecha{
@@ -61,7 +53,7 @@
     border-color: rgb(0, 0, 0);
     border-radius: 5px;
     padding: 3px;
-    margin-left: 18px;
+    margin-left: 100px;
 }
 
 .seleccionar{
@@ -80,6 +72,14 @@
     margin-left: 18px;
 }
 
+.tareasEventos{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: auto;
+}
+
 .tareas{
     font-family: cambria;
     background-color: rgb(255, 255, 255);
@@ -88,7 +88,7 @@
     border-radius: 10px;
     border-width: 4px;
     width: 500px;
-    margin-left: 60px;
+    margin: auto;
 }
 
 .eventos{
@@ -99,7 +99,7 @@
     border-radius: 10px;
     border-width: 4px;
     width: 500px;
-    margin-left: 60px;  
+    margin: auto;
 }
 
 .textoTareas{

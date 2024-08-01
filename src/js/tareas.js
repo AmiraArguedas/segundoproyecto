@@ -102,8 +102,6 @@ function recargar() {
         container.appendChild(inputModi1)
         container.appendChild(botonModi1)
         contenedorTareas.appendChild(container)
-        
-
 
 
         botonEli1.addEventListener("click", function() {  
@@ -115,7 +113,6 @@ function recargar() {
             container.remove()
             console.log("Tarea eliminada permanentemente");
         })
-
 
 
 
@@ -178,9 +175,6 @@ function recargar() {
             console.log("Evento eliminado permanentemente");
         })
 
-
-
-        
 
         botonModi2.addEventListener("click", function() {
 
